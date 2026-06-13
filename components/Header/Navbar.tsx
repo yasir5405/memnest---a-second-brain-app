@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { DiaTextReveal } from "../ui/dia-text-reveal";
-import { NavMenu } from "./NavMenu";
+import NavMenu from "./NavMenu";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -43,12 +43,13 @@ const Navbar = () => {
           size={"lg"}
           variant={"outline"}
           className="px-4 py-4 text-sm font-normal"
+          asChild
         >
-          Log in
+          <Link href={"/login"}>Log in</Link>
         </Button>
 
-        <Button size={"lg"} className="px-4 py-4 text-sm font-normal">
-          Sign up
+        <Button size={"lg"} className="px-4 py-4 text-sm font-normal" asChild>
+          <Link href={"/signup"}>Sign up</Link>
         </Button>
       </div>
     </nav>

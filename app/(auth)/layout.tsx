@@ -1,0 +1,40 @@
+import AppleLoginButton from "@/components/Buttons/AppleLoginButton";
+import GoogleLoginButton from "@/components/Buttons/GoogleLoginButton";
+import AuthHeader from "@/components/Header/AuthHeader";
+import { DiaTextReveal } from "@/components/ui/dia-text-reveal";
+import { FieldGroup, FieldSeparator } from "@/components/ui/field";
+
+export default function AuthLayout({
+  children,
+}: {
+  children: Readonly<React.ReactNode>;
+}) {
+  return (
+    <div className="min-h-screen flex flex-col px-40 py-20 items-center">
+      <div className="flex flex-col gap-5 items-center">
+        <div className="p-1 border cursor-pointer rounded-md">
+          <DiaTextReveal
+            className="text-xl font-semibold tracking-tight"
+            text="MN"
+            colors={["#A97CF8", "#F38CB8", "#FDCC92"]}
+          />
+        </div>
+
+        <div className="flex flex-col items-center">
+          <AuthHeader />
+        </div>
+
+        {children}
+
+        <FieldGroup>
+          <FieldSeparator className="text-sm">Or continue with</FieldSeparator>
+        </FieldGroup>
+
+        <div className="h-16 gap-1 w-80 flex items-center justify-between">
+          <GoogleLoginButton />
+          <AppleLoginButton />
+        </div>
+      </div>
+    </div>
+  );
+}
