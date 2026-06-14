@@ -19,9 +19,7 @@ import {
 } from "../ui/input-group";
 import { EyeIcon, EyeOffIcon } from "lucide-react";
 
-const ResetPasswordForm = () => {
-  const searchParams = useSearchParams();
-
+const ResetPasswordForm = ({ token }: { token?: string }) => {
   const [authError, setAuthError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
@@ -41,8 +39,6 @@ const ResetPasswordForm = () => {
   const onSubmit = async (values: ResetPasswordInput) => {
     setIsLoading(true);
     try {
-      const token = searchParams.get("token");
-
       if (!token) {
         setAuthError("Reset token not found. Please try again.");
         return;
