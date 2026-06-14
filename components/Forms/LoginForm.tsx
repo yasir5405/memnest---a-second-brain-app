@@ -118,6 +118,13 @@ const LoginForm = () => {
 
           {authError && <p className="text-sm text-red-500">{authError}</p>}
 
+          <Link
+            href={"/forgot-password"}
+            className="text-xs text-neutral-400 text-right hover:underline"
+          >
+            Forgot password?
+          </Link>
+
           <Button
             type="submit"
             size={"lg"}

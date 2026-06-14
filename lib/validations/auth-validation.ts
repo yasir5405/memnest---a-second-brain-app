@@ -18,3 +18,15 @@ export const singInSchema = z.object({
 });
 
 export type SignInInput = z.infer<typeof singInSchema>;
+
+export const forgotPasswordSchema = singInSchema.pick({
+  email: true,
+});
+
+export type ForgotPasswordInput = z.infer<typeof forgotPasswordSchema>;
+
+export const resetPasswordSchema = singInSchema.pick({
+  password: true,
+});
+
+export type ResetPasswordInput = z.infer<typeof resetPasswordSchema>;

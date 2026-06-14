@@ -49,7 +49,7 @@ const Navbar = () => {
         </Button>
 
         <Button size={"lg"} className="px-4 py-4 text-sm font-normal" asChild>
-          <Link href={"/signup"}>Sign up</Link>
+          <Link href={"/sign-up"}>Sign up</Link>
         </Button>
       </div>
     </nav>

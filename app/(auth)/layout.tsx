@@ -10,7 +10,7 @@ export default function AuthLayout({
   children: Readonly<React.ReactNode>;
 }) {
   return (
-    <div className="min-h-screen flex flex-col px-40 py-20 items-center">
+    <div className="min-h-screen flex flex-col px-40 justify-center items-center">
       <div className="flex flex-col gap-5 items-center">
         <div className="p-1 border cursor-pointer rounded-md">
           <DiaTextReveal

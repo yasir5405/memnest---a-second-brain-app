@@ -2,6 +2,7 @@ import { betterAuth } from "better-auth";
 import { prismaAdapter } from "better-auth/adapters/prisma";
 import prisma from "./prisma";
 import { resend } from "./resend";
+import { ResetPasswordTemplate } from "@/components/Emails/ResetPasswordTemplate";
 
 export const auth = betterAuth({
   database: prismaAdapter(prisma, {
@@ -14,7 +15,9 @@ export const auth = betterAuth({
         from: "noreply@memnest.xyz",
         to: user.email,
         subject: "Reset Password",
-        html: `<a href="${url}">Reset Password</a>`,
+        react: ResetPasswordTemplate({
+          resetUrl: url,
+        }),
       });
     },
   },
