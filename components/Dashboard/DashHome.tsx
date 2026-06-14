@@ -2,7 +2,7 @@
 import { authClient } from "@/lib/auth-client";
 import { Button } from "../ui/button";
 import { Spinner } from "../ui/spinner";
-import { redirect, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 const DashHome = () => {
   const { data: session, isPending } = authClient.useSession();

@@ -1,16 +1,16 @@
 import AppleLoginButton from "@/components/Buttons/AppleLoginButton";
 import GoogleLoginButton from "@/components/Buttons/GoogleLoginButton";
 import AuthHeader from "@/components/Header/AuthHeader";
+import { OAuthErrorBanner } from "@/components/OAuthErrorBanner";
 import { DiaTextReveal } from "@/components/ui/dia-text-reveal";
 import { FieldGroup, FieldSeparator } from "@/components/ui/field";
-
 export default function AuthLayout({
   children,
 }: {
   children: Readonly<React.ReactNode>;
 }) {
   return (
-    <div className="min-h-screen flex flex-col px-40 justify-center items-center">
+    <div className="min-h-dvh flex flex-col px-40 justify-center items-center">
       <div className="flex flex-col gap-5 items-center">
         <div className="p-1 border cursor-pointer rounded-md">
           <DiaTextReveal
@@ -25,6 +25,8 @@ export default function AuthLayout({
         </div>
 
         {children}
+
+        <OAuthErrorBanner />
 
         <FieldGroup>
           <FieldSeparator className="text-sm">Or continue with</FieldSeparator>
