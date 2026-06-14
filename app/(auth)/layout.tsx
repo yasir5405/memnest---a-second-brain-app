@@ -4,6 +4,7 @@ import AuthHeader from "@/components/Header/AuthHeader";
 import { OAuthErrorBanner } from "@/components/OAuthErrorBanner";
 import { DiaTextReveal } from "@/components/ui/dia-text-reveal";
 import { FieldGroup, FieldSeparator } from "@/components/ui/field";
+import { Suspense } from "react";
 export default function AuthLayout({
   children,
 }: {
@@ -26,7 +27,9 @@ export default function AuthLayout({
 
         {children}
 
-        <OAuthErrorBanner />
+        <Suspense fallback={null}>
+          <OAuthErrorBanner />
+        </Suspense>
 
         <FieldGroup>
           <FieldSeparator className="text-sm">Or continue with</FieldSeparator>
