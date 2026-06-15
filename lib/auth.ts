@@ -3,6 +3,7 @@ import { prismaAdapter } from "better-auth/adapters/prisma";
 import prisma from "./prisma";
 import { resend } from "./resend";
 import { ResetPasswordTemplate } from "@/components/Emails/ResetPasswordTemplate";
+import { VerifyEmailTemplate } from "@/components/Emails/VerifyEmailTemplate";
 
 export const auth = betterAuth({
   database: prismaAdapter(prisma, {
@@ -32,12 +33,24 @@ export const auth = betterAuth({
       clientSecret: process.env.GITHUB_CLIENT_SECRET as string,
     },
   },
-
   account: {
     accountLinking: {
       enabled: true,
       trustedProviders: ["google", "github"],
       updateUserInfoOnLink: true,
     },
+  },
+  emailVerification: {
+    sendVerificationEmail: async ({ url, user }) => {
+      await resend.emails.send({
+        from: "noreply@memnest.xyz",
+        to: user.email,
+        subject: "Verify your MemNest account",
+        react: VerifyEmailTemplate({
+          verificationUrl: url,
+        }),
+      });
+    },
+    sendOnSignUp: true,
   },
 });
