@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { DiaTextReveal } from "../ui/dia-text-reveal";
 import NavMenu from "./NavMenu";
+import MobileNav from "./MobileNav";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -23,7 +24,7 @@ const Navbar = () => {
   return (
     <nav
       className={cn(
-        "w-full h-14 px-60 fixed top-0 left-0 z-10 flex items-center justify-between transition-all duration-200 ease-linear border border-transparent",
+        "w-full h-14 px-5 md:px-60 fixed top-0 left-0 z-10 flex items-center justify-between transition-all duration-200 ease-linear border border-transparent",
         scrolled &&
           "bg-linear-to-b from-white/60 via-white/40 to-white/20 backdrop-blur-md border-b border-neutral-200",
       )}
@@ -38,7 +39,9 @@ const Navbar = () => {
 
       <NavMenu />
 
-      <div className="h-full w-fit flex items-center justify-center gap-2">
+      <MobileNav />
+
+      <div className="h-full w-fit hidden md:flex items-center justify-center gap-2">
         <Button
           size={"lg"}
           variant={"outline"}

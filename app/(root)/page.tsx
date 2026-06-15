@@ -1,5 +1,5 @@
 const page = () => {
-  return <div className="h-dvh">Home page</div>;
+  return <div className="min-h-dvh">Home page</div>;
 };
 
 export default page;

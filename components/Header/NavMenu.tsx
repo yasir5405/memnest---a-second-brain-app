@@ -11,7 +11,7 @@ import {
 
 const NavMenu = () => {
   return (
-    <NavigationMenu className="absolute left-1/2 -translate-x-1/2">
+    <NavigationMenu className="absolute left-1/2 -translate-x-1/2 hidden md:block">
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger className="text-sm">
