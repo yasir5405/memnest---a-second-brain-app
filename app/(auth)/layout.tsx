@@ -1,4 +1,4 @@
-import AppleLoginButton from "@/components/Buttons/AppleLoginButton";
+import AppleLoginButton from "@/components/Buttons/GithubLoginButton";
 import GoogleLoginButton from "@/components/Buttons/GoogleLoginButton";
 import AuthHeader from "@/components/Header/AuthHeader";
 import { OAuthErrorBanner } from "@/components/OAuthErrorBanner";
