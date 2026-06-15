@@ -3,12 +3,12 @@ import { authClient } from "@/lib/auth-client";
 import OAuthLoginButton from "./OAuthLoginButton";
 import { FaGithub } from "react-icons/fa";
 
-const AppleLoginButton = () => {
+const GithubLoginButton = () => {
   const loginWithGithub = async () => {
     await authClient.signIn.social({
       provider: "github",
       callbackURL: "/dashboard",
-      errorCallbackURL: "/login?error=oauth",
+      errorCallbackURL: "/login?error=oauth&provider=github",
     });
   };
   return (
@@ -20,4 +20,4 @@ const AppleLoginButton = () => {
   );
 };
 
-export default AppleLoginButton;
+export default GithubLoginButton;

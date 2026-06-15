@@ -1,4 +1,4 @@
-import AppleLoginButton from "@/components/Buttons/GithubLoginButton";
+import GithubLoginButton from "@/components/Buttons/GithubLoginButton";
 import GoogleLoginButton from "@/components/Buttons/GoogleLoginButton";
 import AuthHeader from "@/components/Header/AuthHeader";
 import { OAuthErrorBanner } from "@/components/OAuthErrorBanner";
@@ -37,7 +37,7 @@ export default function AuthLayout({
 
         <div className="h-16 gap-1 w-80 flex items-center justify-between">
           <GoogleLoginButton />
-          <AppleLoginButton />
+          <GithubLoginButton />
         </div>
       </div>
     </div>

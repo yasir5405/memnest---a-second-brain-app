@@ -8,7 +8,7 @@ const GoogleLoginButton = () => {
     await authClient.signIn.social({
       provider: "google",
       callbackURL: "/dashboard",
-      errorCallbackURL: "/login?error=oauth",
+      errorCallbackURL: "/login?error=oauth&provider=google",
     });
   };
   return (
