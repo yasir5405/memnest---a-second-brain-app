@@ -6,8 +6,7 @@ export default function Layout({
   children: Readonly<React.ReactNode>;
 }) {
   return (
-    <div className="min-h-dvh w-full flex flex-col px-5 md:px-60 relative">
-
+    <div className="min-h-dvh w-full flex flex-col px-5 md:px-50 relative">
       <Navbar />
       <main className="pt-16">{children}</main>
     </div>

@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <nav
       className={cn(
-        "w-full h-16 px-5 md:px-60 fixed top-0 left-0 z-10 flex items-center justify-between transition-all duration-200 ease-linear bg-background",
+        "w-full h-16 px-5 md:px-50 fixed top-0 left-0 z-10 flex items-center justify-between transition-all duration-200 ease-linear bg-background",
       )}
     >
       <Link href={"/"} className="font-bold text-xl">

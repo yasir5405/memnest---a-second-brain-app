@@ -16,19 +16,19 @@ const NavMenu = () => {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Product</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <div className="w-255 h-60"></div>
+            <div className="w-275 h-60"></div>
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <div className="w-255 h-40"></div>
+            <div className="w-275 h-40"></div>
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <div className="w-255 h-80"></div>
+            <div className="w-275 h-80"></div>
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
