@@ -14,10 +14,7 @@ const GithubLoginButton = () => {
         callbackURL: "/dashboard",
         errorCallbackURL: "/login?error=oauth&provider=github",
       });
-    } catch {
-    } finally {
-      setIsLoading(false);
-    }
+    } catch {}
   };
   return (
     <OAuthLoginButton

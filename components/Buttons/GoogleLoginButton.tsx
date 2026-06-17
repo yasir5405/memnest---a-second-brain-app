@@ -14,10 +14,7 @@ const GoogleLoginButton = () => {
         callbackURL: "/dashboard",
         errorCallbackURL: "/login?error=oauth&provider=google",
       });
-    } catch {
-    } finally {
-      setIsLoading(false);
-    }
+    } catch {}
   };
   return (
     <OAuthLoginButton
