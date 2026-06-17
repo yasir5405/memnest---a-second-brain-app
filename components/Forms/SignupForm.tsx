@@ -156,7 +156,10 @@ const SignUpForm = () => {
 
       <h1 className="text-sm">
         Already have an account?{" "}
-        <Link href={"/login"} className="text-sm underline text-neutral-500/70">
+        <Link
+          href={"/login"}
+          className="text-sm underline text-muted-foreground hover:text-primary transition-all duration-200 ease-in"
+        >
           Sign in
         </Link>
       </h1>

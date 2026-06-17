@@ -141,7 +141,7 @@ const LoginForm = () => {
         Don&apos;t have an account?{" "}
         <Link
           href={"/sign-up"}
-          className="text-sm underline text-neutral-500/70"
+          className="underline text-muted-foreground hover:text-primary transition-all duration-200 ease-in"
         >
           Sign up
         </Link>

@@ -11,7 +11,7 @@ const AuthHeader = () => {
         {isSignUp ? "Create your Memnest account." : "Welcome back to Memnest."}
       </h1>
 
-      <h3 className="text-xl font-semibold text-neutral-500/70">
+      <h3 className="text-xl font-semibold text-muted-foreground">
         {isSignUp
           ? "Start building your second brain"
           : "Sign in to your Memnest account"}
