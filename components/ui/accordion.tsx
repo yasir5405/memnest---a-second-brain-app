@@ -75,12 +75,7 @@ function AccordionContent({
       className="overflow-hidden text-xs/relaxed data-open:animate-accordion-down data-closed:animate-accordion-up"
       {...props}
     >
-      <div
-        className={cn(
-          "h-(--radix-accordion-content-height) [&_a]:hover:text-foreground ",
-          className,
-        )}
-      >
+      <div className={cn("[&_a]:hover:text-foreground ", className)}>
         {children}
       </div>
     </AccordionPrimitive.Content>

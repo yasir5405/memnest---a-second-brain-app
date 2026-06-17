@@ -55,7 +55,7 @@ const MobileNav = () => {
 
       <div
         className={cn(
-          "fixed flex flex-col inset-x-0 px-5 py-6 top-14 bottom-0 overflow-y-auto bg-white transition-all duration-300 ease-out gap-3",
+          "fixed flex flex-col inset-x-0 px-5 pt-6 top-14 bottom-0 overflow-y-auto bg-background transition-all duration-300 ease-out gap-6",
           open
             ? "opacity-100 translate-y-0"
             : "opacity-0 -translate-y-2 pointer-events-none",
@@ -65,22 +65,22 @@ const MobileNav = () => {
           type="single"
           collapsible
           defaultValue=""
-          className="w-full gap-3.5"
+          className="w-full gap-6"
         >
           {mobileNavLinks.map(({ name, subCategories }) => (
             <AccordionItem value={name} key={name}>
-              <AccordionTrigger className="font-semibold text-lg data-open:text-primary">
+              <AccordionTrigger className="font-normal text-neutral-400/90 transition-all duration-200 ease-linear text-base data-open:text-white">
                 {name}
               </AccordionTrigger>
-              <AccordionContent className="py-4 overflow-visible">
-                <div className="flex flex-col pl-2 gap-2">
+              <AccordionContent className=" overflow-visible">
+                <div className="flex flex-col pl-2 gap-2 py-3 justify-center">
                   {subCategories?.map(({ href, name, icon: Icon }) => (
                     <Link
                       href={href}
                       key={name}
-                      className="text-lg flex items-center gap-2"
+                      className="text-sm flex items-center gap-2"
                     >
-                      <Icon className="size-4" strokeWidth={1.7}/>
+                      <Icon className="size-4" strokeWidth={1.7} />
                       {name}
                     </Link>
                   ))}
@@ -90,10 +90,16 @@ const MobileNav = () => {
           ))}
         </Accordion>
 
-        <Link href={"/customers"} className="font-semibold text-lg">
+        <Link
+          href={"/customers"}
+          className="font-normal text-neutral-400/90 text-base"
+        >
           Customers
         </Link>
-        <Link href={"/pricing"} className="font-semibold text-lg">
+        <Link
+          href={"/pricing"}
+          className="font-normal text-neutral-400/90 text-base"
+        >
           Pricing
         </Link>
 

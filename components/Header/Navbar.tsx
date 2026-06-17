@@ -1,32 +1,15 @@
-"use client";
 import Link from "next/link";
 import { Button } from "../ui/button";
-import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { DiaTextReveal } from "../ui/dia-text-reveal";
 import NavMenu from "./NavMenu";
 import MobileNav from "./MobileNav";
 
 const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
   return (
     <nav
       className={cn(
-        "w-full h-14 px-5 md:px-60 fixed top-0 left-0 z-10 flex items-center justify-between transition-all duration-200 ease-linear border border-transparent",
-        scrolled &&
-          "bg-linear-to-b from-white/60 via-white/40 to-white/20 backdrop-blur-md border-b border-neutral-200",
+        "w-full h-16 px-5 md:px-60 fixed top-0 left-0 z-10 flex items-center justify-between transition-all duration-200 ease-linear bg-background",
       )}
     >
       <Link href={"/"} className="font-bold text-xl">
@@ -45,13 +28,13 @@ const Navbar = () => {
         <Button
           size={"lg"}
           variant={"outline"}
-          className="px-4 py-4 text-sm font-normal"
+          className="px-4 py-4 text-muted-foreground font-normal"
           asChild
         >
           <Link href={"/login"}>Log in</Link>
         </Button>
 
-        <Button size={"lg"} className="px-4 py-4 text-sm font-normal" asChild>
+        <Button className="px-4 py-4 font-semibold" asChild>
           <Link href={"/sign-up"}>Sign up</Link>
         </Button>
       </div>

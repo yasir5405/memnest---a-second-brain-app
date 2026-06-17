@@ -14,25 +14,19 @@ const NavMenu = () => {
     <NavigationMenu className="absolute left-1/2 -translate-x-1/2 hidden md:block">
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="text-sm">
-            Product
-          </NavigationMenuTrigger>
+          <NavigationMenuTrigger>Product</NavigationMenuTrigger>
           <NavigationMenuContent>
             <div className="w-255 h-60"></div>
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="text-sm">
-            Solutions
-          </NavigationMenuTrigger>
+          <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
           <NavigationMenuContent>
             <div className="w-255 h-40"></div>
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="text-sm">
-            Resources
-          </NavigationMenuTrigger>
+          <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
           <NavigationMenuContent>
             <div className="w-255 h-80"></div>
           </NavigationMenuContent>
@@ -40,7 +34,10 @@ const NavMenu = () => {
         <NavigationMenuItem>
           <NavigationMenuLink
             asChild
-            className={navigationMenuTriggerStyle() + " text-sm"}
+            className={
+              navigationMenuTriggerStyle() +
+              " text-muted-foreground hover:text-primary"
+            }
           >
             <Link href={"/customers"}>Customers</Link>
           </NavigationMenuLink>
@@ -48,7 +45,10 @@ const NavMenu = () => {
         <NavigationMenuItem>
           <NavigationMenuLink
             asChild
-            className={navigationMenuTriggerStyle() + " text-sm"}
+            className={
+              navigationMenuTriggerStyle() +
+              " text-muted-foreground hover:text-primary"
+            }
           >
             <Link href={"/pricing"}>Pricing</Link>
           </NavigationMenuLink>
