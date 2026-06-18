@@ -16,7 +16,8 @@ const OAuthLoginButton = ({ icon, name, onClick, isLoading }: props) => {
       onClick={onClick}
       variant={"outline"}
       size={"lg"}
-      className="flex flex-col gap-0.5 py-8 px-10 flex-1"
+      className="flex md:flex-col gap-0.5 py-8 px-10 flex-1"
+      disabled={isLoading}
     >
       {isLoading ? <Spinner /> : icon}
       <p className="text-sm">{name}</p>

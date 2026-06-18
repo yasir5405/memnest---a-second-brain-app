@@ -7,21 +7,19 @@ const Hero = () => {
     <div className="w-full flex flex-col h-110 justify-center gap-4 md:gap-6">
       <Link
         href={"/"}
-        className="text-xs md:text-sm flex gap-1 hover:gap-1.5 transition-all duration-150 ease-in items-center"
+        className="text-xs md:text-sm flex flex-col md:flex-row gap-0 md:gap-1"
       >
-        <span>
-          Framer 3.0 is here{" "}
-          <span className="text-muted-foreground">
-            See everything we shipped
-          </span>
+        Memnest 1.0 is here{" "}
+        <span className="text-muted-foreground flex items-center gap-1 hover:gap-1.5 transition-all duration-150 ease-in">
+          See everything we shipped
+          <ArrowRightIcon className="size-4 text-muted-foreground" />
         </span>
-        <ArrowRightIcon className="size-4 text-muted-foreground hidden md:block" />
       </Link>
       <div className="flex flex-col">
-        <h1 className="text-3xl md:text-5xl font-semibold font-heading">
+        <h1 className="text-3xl md:text-5xl font-bold font-heading">
           Everything You Know.
         </h1>
-        <h1 className="text-3xl md:text-5xl font-semibold font-heading">
+        <h1 className="text-3xl md:text-5xl font-bold font-heading">
           Instantly Accessible.
         </h1>
       </div>
@@ -30,12 +28,12 @@ const Hero = () => {
         ideas.
       </p>
 
-      <div className="w-full flex flex-col md:flex-row gap-3">
-        <Button className="px-4 py-4 text-sm font-semibold">
+      <div className="w-full flex gap-3">
+        <Button className="md:px-4 md:py-4 text-xs md:text-sm font-semibold">
           Get started for free
         </Button>
         <Button
-          className="px-4 py-4 text-sm font-semibold"
+          className="md:px-4 md:py-4 text-xs md:text-sm font-semibold"
           variant={"secondary"}
           asChild
         >
